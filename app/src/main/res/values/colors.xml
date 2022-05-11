@@ -5,6 +5,22 @@
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
+
+
+    <!-- Color Pallet -->
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="success_green">#5cb85c</color>
+    <color name="warning_yellow">#f0ad4e</color>
+    <color name="danger_red">#d9534f</color>
+
+    <color name="light_blue">#3BCBF9</color>
+    <color name="light_green">#3BEAB4</color>
+    <color name="purple">#9F15FF</color>
+    <color name="pink_purple">#FF42FC</color>
+    <color name="dark_pink">#EB1C6B</color>
+
+
+
 </resources>
