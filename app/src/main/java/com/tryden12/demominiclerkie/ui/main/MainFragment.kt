@@ -27,13 +27,15 @@ class MainFragment : Fragment(), View.OnClickListener {
 
         navController = Navigation.findNavController(view)
 
-        view.findViewById<Button>(R.id.view_transactions_btn).setOnClickListener(this)
-        view.findViewById<Button>(R.id.send_money_btn).setOnClickListener(this)
-        view.findViewById<Button>(R.id.view_balance_btn).setOnClickListener(this)
+        view.findViewById<Button>(R.id.view_fullscreen_btn).setOnClickListener(this)
+        view.findViewById<Button>(R.id.view_popup_btn).setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
-        TODO("Not yet implemented")
+        when (v!!.id) {
+            R.id.view_fullscreen_btn -> navController!!.navigate(R.id.action_mainFragment_to_fullscreenFragment)
+            R.id.view_popup_btn -> navController!!.navigate(R.id.action_mainFragment_to_popupFragment)
+        }
     }
 
 }
