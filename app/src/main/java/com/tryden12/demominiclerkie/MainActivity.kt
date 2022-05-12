@@ -2,7 +2,6 @@ package com.tryden12.demominiclerkie
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.tryden12.demominiclerkie.ui.main.MainFragment
 
 class MainActivity : AppCompatActivity() {
 
