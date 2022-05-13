@@ -10,17 +10,15 @@
         <item name="colorSecondaryVariant">@color/dark_pink</item>
         <item name="colorOnSecondary">@color/light_blue</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <item name="android:statusBarColor" tools:targetApi="l">@color/dark_blue</item>
         <!-- Customize your theme here. -->
         <item name="actionBarStyle">@style/MyActionBar</item>
-
-
 
         <item name="android:windowTranslucentNavigation">true</item>
     </style>
 
 
-
+    <!-- Custom Action Bar -->
     <style name="MyActionBarTitle" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
         <item name="android:textColor">@color/black</item>
     </style>
@@ -30,4 +28,13 @@
         <item name="titleTextStyle">@style/MyActionBarTitle</item>
     </style>
 
+
+    <!-- SplashScreen -->
+    <style name="SplashScreen" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowBackground">@drawable/bg_splash_screen</item>
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorPrimaryVariant">@color/black</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+    </style>
 </resources>
