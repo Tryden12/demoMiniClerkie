@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.main.MainFragment"
+    android:background="@color/blue"
     android:id="@+id/parentLayout">
 
 
@@ -20,37 +21,120 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="108dp"
 
-            android:layout_marginTop="570dp"
+            android:layout_marginTop="296dp"
             android:layout_marginEnd="108dp"
             android:text="View fullscreen"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.478"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+        <Button
+            android:id="@+id/view_popup_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="132dp"
+
+            android:layout_marginTop="88dp"
+            android:layout_marginEnd="132dp"
+            android:layout_marginBottom="75dp"
+            android:text="View popup"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view_fullscreen_btn" />
+
+
+        <TextView
+            android:id="@+id/heading1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="65dp"
+            android:layout_marginTop="125dp"
+            android:text="@string/secret_tools"
+            android:textSize="35sp"
+            android:fontFamily="@font/roboto_bold"
+            android:textColor="@color/white"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/view_popup_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="132dp"
+        <TextView
+            android:id="@+id/heading2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="65dp"
+            android:layout_marginTop="0dp"
+            android:text="@string/to_master_debt"
+            android:textSize="28sp"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/heading1" />
 
-        android:layout_marginTop="88dp"
-        android:layout_marginEnd="132dp"
-        android:text="View popup"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view_fullscreen_btn" />
 
         <View
             android:id="@+id/view"
             android:layout_width="300dp"
             android:layout_height="100dp"
-            android:layout_marginStart="65dp"
-            android:layout_marginTop="85dp"
-            android:layout_marginEnd="46dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="30dp"
+            android:elevation="10dp"
             android:background="@drawable/card_bg"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/heading2" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="60dp"
+            android:text="@string/view_fullscreen"
+            android:fontFamily="@font/roboto_bold"
+            android:textSize="20sp"
+            android:elevation="12dp"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="@+id/view"
+            app:layout_constraintTop_toTopOf="@+id/view" />
+
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="300dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="20dp"
+            android:elevation="10dp"
+            android:background="@drawable/card_bg"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="60dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/view_popup"
+            android:textColor="@color/white"
+            android:elevation="12dp"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/view2"
+            app:layout_constraintTop_toTopOf="@+id/view2" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/myRecyclerView"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="50dp"
+            android:background="@drawable/recycler_bg"
+            android:elevation="10dp"
+            android:padding="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/view2" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

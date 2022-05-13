@@ -5,4 +5,11 @@
 
     <string name="open">Open</string>
     <string name="close">Close</string>
+
+
+    <string name="secret_tools">Hi!</string>
+    <string name="to_master_debt">Welcome to my \nmini Clerkie app</string>
+
+    <string name="view_fullscreen">View Fullscreen</string>
+    <string name="view_popup">View Popup</string>
 </resources>
