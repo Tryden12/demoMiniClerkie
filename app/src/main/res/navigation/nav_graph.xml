@@ -12,10 +12,20 @@
         tools:layout="@layout/fragment_main" >
         <action
             android:id="@+id/action_mainFragment_to_fullscreenFragment"
-            app:destination="@id/fullscreenFragment" />
+            app:destination="@id/fullscreenFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            />
         <action
             android:id="@+id/action_mainFragment_to_popupFragment"
-            app:destination="@id/popupFragment" />
+            app:destination="@id/popupFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            />
     </fragment>
 
 
@@ -25,7 +35,7 @@
         android:label="fragment_fullscreen"
         tools:layout="@layout/fragment_fullscreen" />
 
-    
+
     <fragment
         android:id="@+id/popupFragment"
         android:name="com.tryden12.demominiclerkie.ui.main.PopupFragment"
