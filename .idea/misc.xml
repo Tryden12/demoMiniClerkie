@@ -8,6 +8,8 @@
         <entry key="app/src/main/res/layout/fragment_popup.xml" value="0.375" />
         <entry key="app/src/main/res/layout/main_activity.xml" value="0.24010416666666667" />
         <entry key="app/src/main/res/layout/main_fragment.xml" value="0.24010416666666667" />
+        <entry key="app/src/main/res/layout/nav_header.xml" value="0.24010416666666667" />
+        <entry key="app/src/main/res/menu/nav_header_menu.xml" value="0.24010416666666667" />
       </map>
     </option>
   </component>
