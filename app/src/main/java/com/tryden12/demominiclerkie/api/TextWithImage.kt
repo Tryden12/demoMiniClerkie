@@ -8,7 +8,7 @@ interface TextWithImage {
 
     @GET("text_with_image")
     suspend fun getObject(
-        @Path("id") id : Int
+        @Path("id") id: Int
     ) : TextWithImage
 
 
