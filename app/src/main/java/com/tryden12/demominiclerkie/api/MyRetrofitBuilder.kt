@@ -11,4 +11,24 @@ object MyRetrofitBuilder {
         Retrofit.Builder().baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
     }
+
+    val textWithImage : TextWithImage by lazy {
+        retrofitBuilder
+            .build().create(TextWithImage::class.java)
+    }
+
+    val text : Text by lazy {
+        retrofitBuilder
+            .build().create(Text::class.java)
+    }
+
+    val image : Image by lazy {
+        retrofitBuilder
+            .build().create(Image::class.java)
+    }
+
+    val space : Space by lazy {
+        retrofitBuilder
+            .build().create(Space::class.java)
+    }
 }
