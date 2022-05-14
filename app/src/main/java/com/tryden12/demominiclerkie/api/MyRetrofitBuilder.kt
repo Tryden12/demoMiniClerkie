@@ -4,7 +4,22 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 object MyRetrofitBuilder {
+    private var retrofit: Retrofit? = null
 
+    fun getClient(baseUrl: String) : Retrofit {
+        if (retrofit == null) {
+            retrofit = Retrofit.Builder()
+                .baseUrl(baseUrl)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build()
+        }
+        return retrofit!!
+    }
+
+
+
+
+    /*
     const val BASE_URL = "https://my-json-server.typicode.com/Tryden12/mockjson/"
 
     val retrofitBuilder : Retrofit.Builder by lazy {
@@ -31,4 +46,6 @@ object MyRetrofitBuilder {
         retrofitBuilder
             .build().create(Space::class.java)
     }
+
+     */
 }

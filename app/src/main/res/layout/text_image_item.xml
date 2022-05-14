@@ -5,17 +5,17 @@
     android:id="@+id/item_constraintLayout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/card_bg">
+    android:background="@color/white">
 
 
     <TextView
-        android:id="@+id/item_textview"
+        android:id="@+id/item_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
         android:layout_marginTop="30dp"
-        android:text="TextView"
-        android:textColor="@color/white"
+        android:text="@string/title"
+        android:textColor="@color/black"
         android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/cardview"
@@ -28,13 +28,13 @@
         android:layout_marginStart="15dp"
         android:layout_marginTop="11dp"
         android:layout_marginBottom="8dp"
-        android:text="TextView"
-        android:textColor="@color/white"
+        android:text="@string/subtitle"
+        android:textColor="@color/black"
         android:textSize="12sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/cardview"
-        app:layout_constraintTop_toBottomOf="@+id/item_textview"
+        app:layout_constraintTop_toBottomOf="@+id/item_title"
         app:layout_constraintVertical_bias="0.0" />
 
 
@@ -53,12 +53,12 @@
         android:thicknessRatio="2.0"
         app:cardCornerRadius="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/item_textview"
+        app:layout_constraintEnd_toStartOf="@+id/item_title"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/imageview1"
+            android:id="@+id/item_imageview"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_alignParentTop="true"

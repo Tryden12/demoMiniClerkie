@@ -3,8 +3,20 @@ package com.tryden12.demominiclerkie.model
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
-data class Text(
+class Text{
+    var id : String? = null
+    var type : String? = null
+    var text : String? = null
+    var font_size : String? = null
+    var color : String? = null
+    var width_percent : String? = null
+    var alignment : String? = null
+    var view_alignment : String? = null
+    var click_action : String? = null
+    var click_action_data : String? = null
+}
 
+    /*
     @Expose
     @SerializedName("id")
     val id : String? = null,
@@ -48,3 +60,5 @@ data class Text(
 
 
 )
+
+     */

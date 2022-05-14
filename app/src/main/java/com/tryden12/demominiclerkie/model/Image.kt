@@ -3,7 +3,22 @@ package com.tryden12.demominiclerkie.model
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
-data class Image(
+class Image {
+    var id : Int? = null
+    var type : String? = null
+    var width_percent : Int? = null
+    var h2w_ratio : Int? = null
+    var view_alignment : String? = null
+    var src : String? = null
+    var click_action : String? = null
+    var click_action_data : String? = null
+}
+
+
+
+
+
+    /*(
 
 
     @Expose
@@ -41,3 +56,5 @@ data class Image(
 
 
 )
+
+     */

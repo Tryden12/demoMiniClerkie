@@ -7,9 +7,19 @@ import com.tryden12.demominiclerkie.api.Space
 import com.tryden12.demominiclerkie.api.Text
 import com.tryden12.demominiclerkie.api.TextWithImage
 
-data class TextWithImage(
+class TextWithImage{
+    var id: Int? = null
+    var type: String? = null
+    var title: String? = null
+    var subtitle: String? = null
+    var imageSrc: String? = null
+    var height: String? = null
+    var click_action: String? = null
+
+}
 
 
+/*
     @Expose
     @SerializedName("id")
     val id: Int? = null,
@@ -47,4 +57,7 @@ data class TextWithImage(
     override suspend fun getObject(id: String): Text {
         TODO("Not yet implemented")
     }
-}
+    }
+ */
+
+
