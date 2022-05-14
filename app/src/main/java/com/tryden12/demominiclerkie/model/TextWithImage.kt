@@ -2,12 +2,9 @@ package com.tryden12.demominiclerkie.model
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
-import com.tryden12.demominiclerkie.api.Image
-import com.tryden12.demominiclerkie.api.Space
-import com.tryden12.demominiclerkie.api.Text
-import com.tryden12.demominiclerkie.api.TextWithImage
 
 class TextWithImage{
+
     var id: Int? = null
     var type: String? = null
     var title: String? = null
@@ -17,8 +14,6 @@ class TextWithImage{
     var click_action: String? = null
 
 }
-
-
 /*
     @Expose
     @SerializedName("id")
@@ -49,15 +44,17 @@ class TextWithImage{
     @SerializedName("click_action")
     val click_action: String? = null
 
-) : TextWithImage, Text, Image, Space {
-    override suspend fun getObject(id: Int): com.tryden12.demominiclerkie.model.TextWithImage {
-        TODO("Not yet implemented")
-    }
 
-    override suspend fun getObject(id: String): Text {
+
+) : TextWithImage, Text, Image, Space {
+
+
+    override fun getItemList(): MutableList<com.tryden12.demominiclerkie.model.TextWithImage> {
         TODO("Not yet implemented")
     }
-    }
+}
+
  */
+
 
 
