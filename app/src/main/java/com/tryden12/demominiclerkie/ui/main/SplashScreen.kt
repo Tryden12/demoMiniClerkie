@@ -1,4 +1,4 @@
-package com.tryden12.demominiclerkie.ui
+package com.tryden12.demominiclerkie.ui.main
 
 import android.content.Intent
 import android.os.Bundle
