@@ -1,5 +1,7 @@
 package com.tryden12.demominiclerkie.model
 
+import com.google.gson.annotations.Expose
+import com.google.gson.annotations.SerializedName
 import com.tryden12.demominiclerkie.model.nestedDetailModels.ImageNestedDetails
 import com.tryden12.demominiclerkie.model.nestedDetailModels.SubtitleNestedDetails
 import com.tryden12.demominiclerkie.model.nestedDetailModels.TitleNestedDetails
@@ -8,53 +10,37 @@ import com.tryden12.demominiclerkie.model.nestedDetailModels.TitleNestedDetails
 data class TextWithImage  // Constructor
     (
     // Getters
-    var id: Int?, var type: String?, var title : MutableList<TitleNestedDetails>,
-    var subtitle : MutableList<SubtitleNestedDetails>, var imageSrc : MutableList<ImageNestedDetails>,
-    var height: String?, var click_action: String?
-)
-
-
-/*
     @Expose
     @SerializedName("id")
-    val id: Int? = null,
+    var id: Int?,
 
     @Expose
     @SerializedName("type")
-    val type: String? = null,
-
+    var type: String?,
 
     @Expose
     @SerializedName("title")
-    val title: String? = null,
+    var title : MutableList<TitleNestedDetails>,
 
     @Expose
     @SerializedName("subtitle")
-    val subtitle: String? = null,
+    var subtitle : MutableList<SubtitleNestedDetails>,
 
     @Expose
     @SerializedName("image")
-    val image: String? = null,
+    var image : MutableList<ImageNestedDetails>,
 
     @Expose
     @SerializedName("height")
-    val height: String? = null,
+    var height: String?,
 
     @Expose
     @SerializedName("click_action")
-    val click_action: String? = null
+    var click_action: String? = null
+)
 
 
 
-) : TextWithImage, Text, Image, Space {
-
-
-    override fun getItemList(): MutableList<com.tryden12.demominiclerkie.model.TextWithImage> {
-        TODO("Not yet implemented")
-    }
-}
-
- */
 
 
 

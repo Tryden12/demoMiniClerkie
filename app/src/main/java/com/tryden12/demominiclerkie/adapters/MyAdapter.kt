@@ -24,9 +24,9 @@ class MyAdapter : RecyclerView.Adapter<MyAdapter.ViewHolder>() {
     }
 
     override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) {
-        Picasso.get().load(itemList[position].imageSrc).into(viewHolder.image)
-        viewHolder.title.text = itemList[position].title
-        viewHolder.subtitle.text = itemList[position].subtitle
+        //Picasso.get().load(itemList[position].image).into(viewHolder.image)
+        viewHolder.title.text = itemList[position].title.toString()
+        viewHolder.subtitle.text = itemList[position].subtitle.toString()
 
     }
 
