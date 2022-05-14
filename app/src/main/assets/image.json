@@ -1,0 +1,19 @@
+[
+  {
+    "id": 1,
+    "type": "image",
+    "width_percent": 0.5,
+    "h2w_ratio": 1.0,
+    "view_alignment": "center",
+    "src": "https://i.imgur.com/KavRSSi.jpeg",
+    "click_action": "dismiss",
+    "click_action_data": {
+      "data": [
+        {
+          "type": "image",
+          "click_action": "dismiss"
+        }
+      ]
+    }
+  }
+]

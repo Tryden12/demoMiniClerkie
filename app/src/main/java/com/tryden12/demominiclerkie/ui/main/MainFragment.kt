@@ -64,10 +64,7 @@ class MainFragment : Fragment(), View.OnClickListener {
         view.findViewById<Button>(R.id.view_popup_btn).setOnClickListener(this)
     }
 
-    private fun loadAllItemList() {
-        mService.getItemList().add(TextWithImage())
 
-    }
 
     override fun onClick(v: View?) {
         when (v!!.id) {
