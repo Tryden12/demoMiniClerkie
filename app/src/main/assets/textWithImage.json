@@ -19,7 +19,7 @@
         "color": "black"
       },
       "image": {
-        "src": "https://i.imgur.com/KavRSSi.jpeg"
+        "src": "https://i.imgur.com/XR2LgNF.jpg"
       },
       "height": 0,
       "click_action": "dismiss"
@@ -28,13 +28,13 @@
       "id": 2,
       "type": "text_with_image",
       "title":{
-        "text": "Tyler",
+        "text": "James",
         "font_size": "14",
         "font_weight": "normal",
         "color": "black"
       },
       "subtitle":{
-        "text": "Android Developer",
+        "text": "Software Engineer",
         "font_size": "14",
         "font_weight": "normal",
         "color": "black"
@@ -49,19 +49,40 @@
       "id": 3,
       "type": "text_with_image",
       "title":{
-        "text": "Tyler",
+        "text": "Amanda",
         "font_size": "14",
         "font_weight": "normal",
         "color": "black"
       },
       "subtitle":{
-        "text": "Android Developer",
+        "text": "iOS Developer",
         "font_size": "14",
         "font_weight": "normal",
         "color": "black"
       },
       "image": {
-        "src": "https://i.imgur.com/KavRSSi.jpeg"
+        "src": "https://i.imgur.com/Fy0TCIl.jpg"
+      },
+      "height": 0,
+      "click_action": "dismiss"
+    },
+    {
+      "id": 3,
+      "type": "text_with_image",
+      "title":{
+        "text": "Pete",
+        "font_size": "14",
+        "font_weight": "normal",
+        "color": "black"
+      },
+      "subtitle":{
+        "text": "The Penguin",
+        "font_size": "14",
+        "font_weight": "normal",
+        "color": "black"
+      },
+      "image": {
+        "src": "https://i.imgur.com/6Gqczyz.png"
       },
       "height": 0,
       "click_action": "dismiss"

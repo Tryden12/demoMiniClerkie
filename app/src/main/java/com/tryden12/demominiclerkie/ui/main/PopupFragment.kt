@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.Window
 import android.widget.RadioButton
 import android.widget.RadioGroup
 import androidx.fragment.app.DialogFragment
@@ -78,9 +79,6 @@ class PopupFragment : DialogFragment(), RadioGroup.OnCheckedChangeListener {
                     amount1.setTextColor(resources.getColor(R.color.mint_green))
                 }
             }
-
-
-
         }
 
 
@@ -103,6 +101,11 @@ class PopupFragment : DialogFragment(), RadioGroup.OnCheckedChangeListener {
         val rect = dm.run { Rect(0, 0, widthPixels, heightPixels) }
         val percentWidth = rect.width() * percent
         dialog?.window?.setLayout(percentWidth.toInt(), ViewGroup.LayoutParams.WRAP_CONTENT)
+
+        // Set transparent background and no title
+        if (dialog != null && dialog?.window != null) {
+            dialog!!.window?.setBackgroundDrawable(resources.getDrawable(R.drawable.custom_dialog_bg));
+        }
     }
 
     /**
