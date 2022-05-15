@@ -1,8 +1,7 @@
 package com.tryden12.demominiclerkie.model.nestedDetailModels
 
 
-class ImageNestedDetails     // Constructor
+class Image     // Constructor
     (
-// Getters
     var src: String?
 )

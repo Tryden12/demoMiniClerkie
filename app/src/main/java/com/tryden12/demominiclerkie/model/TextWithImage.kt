@@ -2,9 +2,9 @@ package com.tryden12.demominiclerkie.model
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
-import com.tryden12.demominiclerkie.model.nestedDetailModels.ImageNestedDetails
-import com.tryden12.demominiclerkie.model.nestedDetailModels.SubtitleNestedDetails
-import com.tryden12.demominiclerkie.model.nestedDetailModels.TitleNestedDetails
+import com.tryden12.demominiclerkie.model.nestedDetailModels.Image
+import com.tryden12.demominiclerkie.model.nestedDetailModels.Subtitle
+import com.tryden12.demominiclerkie.model.nestedDetailModels.Title
 
 
 data class TextWithImage  // Constructor
@@ -20,15 +20,15 @@ data class TextWithImage  // Constructor
 
     @Expose
     @SerializedName("title")
-    var title : MutableList<TitleNestedDetails>,
+    var title : List<Title>,
 
     @Expose
     @SerializedName("subtitle")
-    var subtitle : MutableList<SubtitleNestedDetails>,
+    var subtitle : List<Subtitle>,
 
     @Expose
     @SerializedName("image")
-    var image : MutableList<ImageNestedDetails>,
+    var image : List<Image>,
 
     @Expose
     @SerializedName("height")
