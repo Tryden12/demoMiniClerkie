@@ -18,22 +18,7 @@ class MainActivity : AppCompatActivity() {
         binding = MainActivityBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        /***************** Toggle Menu ****************************************************/
-        toggle = ActionBarDrawerToggle(this, binding.drawerLayout, R.string.open, R.string.close)
-        binding.drawerLayout.addDrawerListener(toggle)
-        toggle.syncState()
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        binding.navView.setNavigationItemSelectedListener {
-            when (it.itemId) {
-                R.id.action_menu1 -> Toast.makeText(applicationContext,
-                    "Clicked item 1", Toast.LENGTH_SHORT).show()
-                R.id.action_menu2 -> Toast.makeText(applicationContext,
-                    "Clicked item 2", Toast.LENGTH_SHORT).show()
-                R.id.action_menu3 -> Toast.makeText(applicationContext,
-                    "Clicked item 3", Toast.LENGTH_SHORT).show()
-            }
-            true
-        }
+        toggleMenu()
 
         /*********** View Model ****************************************************/
 
@@ -50,5 +35,24 @@ class MainActivity : AppCompatActivity() {
         }
 
         return super.onOptionsItemSelected(item)
+    }
+
+    fun toggleMenu() {
+        /***************** Toggle Menu ****************************************************/
+        toggle = ActionBarDrawerToggle(this, binding.drawerLayout, R.string.open, R.string.close)
+        binding.drawerLayout.addDrawerListener(toggle)
+        toggle.syncState()
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        binding.navView.setNavigationItemSelectedListener {
+            when (it.itemId) {
+                R.id.action_menu1 -> Toast.makeText(applicationContext,
+                    "Clicked item 1", Toast.LENGTH_SHORT).show()
+                R.id.action_menu2 -> Toast.makeText(applicationContext,
+                    "Clicked item 2", Toast.LENGTH_SHORT).show()
+                R.id.action_menu3 -> Toast.makeText(applicationContext,
+                    "Clicked item 3", Toast.LENGTH_SHORT).show()
+            }
+            true
+        }
     }
 }

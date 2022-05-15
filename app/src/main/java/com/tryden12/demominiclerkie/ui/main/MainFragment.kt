@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.tryden12.demominiclerkie.MainActivity
 import com.tryden12.demominiclerkie.R
 import com.tryden12.demominiclerkie.adapters.Adapter
 import com.tryden12.demominiclerkie.adapters.MyAdapter
@@ -56,6 +57,8 @@ class MainFragment : Fragment(), View.OnClickListener {
         super.onViewCreated(view, savedInstanceState)
         mService = Common.retrofitService
 
+
+
         // Setup Layout Manager
         val layoutManager = LinearLayoutManager(context)
         binding.myRecyclerView.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
@@ -76,6 +79,8 @@ class MainFragment : Fragment(), View.OnClickListener {
 
         /*****************************************************************************************/
         navController = Navigation.findNavController(view)
+        view.findViewById<View>(R.id.view_fullscreen).setOnClickListener(this)
+        view.findViewById<View>(R.id.view_popup).setOnClickListener(this)
         view.findViewById<Button>(R.id.view_fullscreen_btn).setOnClickListener(this)
         view.findViewById<Button>(R.id.view_popup_btn).setOnClickListener(this)
         /*****************************************************************************************/
@@ -167,6 +172,8 @@ class MainFragment : Fragment(), View.OnClickListener {
 
     override fun onClick(v: View?) {
         when (v!!.id) {
+            R.id.view_fullscreen -> navController!!.navigate(R.id.action_mainFragment_to_fullscreenFragment)
+            R.id.view_popup -> navController!!.navigate(R.id.action_mainFragment_to_popupFragment)
             R.id.view_fullscreen_btn -> navController!!.navigate(R.id.action_mainFragment_to_fullscreenFragment)
             R.id.view_popup_btn -> navController!!.navigate(R.id.action_mainFragment_to_popupFragment)
         }

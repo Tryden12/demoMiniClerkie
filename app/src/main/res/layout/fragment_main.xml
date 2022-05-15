@@ -33,7 +33,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.478"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/view2" />
+            app:layout_constraintTop_toBottomOf="@+id/view_popup" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/view_popup_btn"
@@ -84,7 +84,7 @@
 
 
         <View
-            android:id="@+id/view"
+            android:id="@+id/view_fullscreen"
             android:layout_width="300dp"
             android:layout_height="100dp"
             android:layout_marginStart="50dp"
@@ -105,12 +105,12 @@
             android:textSize="20sp"
             android:elevation="12dp"
             android:textColor="@color/white"
-            app:layout_constraintStart_toStartOf="@+id/view"
-            app:layout_constraintTop_toTopOf="@+id/view" />
+            app:layout_constraintStart_toStartOf="@+id/view_fullscreen"
+            app:layout_constraintTop_toTopOf="@+id/view_fullscreen" />
 
 
         <View
-            android:id="@+id/view2"
+            android:id="@+id/view_popup"
             android:layout_width="300dp"
             android:layout_height="100dp"
             android:layout_marginStart="50dp"
@@ -118,7 +118,7 @@
             android:elevation="10dp"
             android:background="@drawable/card_bg"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/view" />
+            app:layout_constraintTop_toBottomOf="@+id/view_fullscreen" />
 
         <TextView
             android:id="@+id/textView4"
@@ -131,8 +131,8 @@
             android:textColor="@color/white"
             android:elevation="12dp"
             android:textSize="20sp"
-            app:layout_constraintStart_toStartOf="@+id/view2"
-            app:layout_constraintTop_toTopOf="@+id/view2" />
+            app:layout_constraintStart_toStartOf="@+id/view_popup"
+            app:layout_constraintTop_toTopOf="@+id/view_popup" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/myRecyclerView"
@@ -146,7 +146,7 @@
             android:padding="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/view2" />
+            app:layout_constraintTop_toBottomOf="@+id/view_popup" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
