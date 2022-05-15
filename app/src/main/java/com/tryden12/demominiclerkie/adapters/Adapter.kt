@@ -28,10 +28,11 @@ class Adapter(private val context: Context?, private var textWithImageList: List
 
     override fun onBindViewHolder(customViewHolder: CustomViewHolder, pos: Int) {
         val textWithImage = textWithImageList!![pos]
-        customViewHolder.title.text = textWithImage.title.toString()
-        customViewHolder.subtitle.text = textWithImage.subtitle.toString()
+        customViewHolder.title.text = textWithImage.titleText.toString()
+        customViewHolder.subtitle.text = textWithImage.subtitleText.toString()
+        //customViewHolder.image.text = textWithImage.imageSrc.toString()
 
-         //Picasso.get().load(textWithImage.image).into(customViewHolder.image)
+         Picasso.get().load(textWithImage.imageSrc).into(customViewHolder.image)
 
 
     }

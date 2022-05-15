@@ -7,13 +7,13 @@
       "id": 1,
       "type": "text_with_image",
       "title":{
-        "text": "Title",
+        "text": "Tyler",
         "font_size": "14",
         "font_weight": "normal",
         "color": "black"
       },
       "subtitle":{
-        "text": "Subtitle",
+        "text": "Android Developer",
         "font_size": "14",
         "font_weight": "normal",
         "color": "black"

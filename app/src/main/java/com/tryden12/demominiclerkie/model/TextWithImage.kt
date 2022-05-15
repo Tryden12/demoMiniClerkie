@@ -37,6 +37,11 @@ class TextWithImage { // Constructor
     @Expose
     @SerializedName("click_action")
     var click_action: String? = null
+
+
+    var titleText: String = ""
+    var subtitleText: String = ""
+    var imageSrc: String = ""
 }
 
 

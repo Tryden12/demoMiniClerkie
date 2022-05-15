@@ -25,7 +25,6 @@ import kotlinx.android.synthetic.main.text_image_item.*
 import org.json.JSONException
 import org.json.JSONObject
 import java.io.IOException
-import java.io.InputStream
 
 class MainFragment : Fragment(), View.OnClickListener {
 
@@ -124,21 +123,26 @@ class MainFragment : Fragment(), View.OnClickListener {
                 for (i in 0 until jsonArray.length()) {
                     val textWithImageModel = TextWithImage()
                     val jsonObjectItem     = jsonArray.getJSONObject(i)
-                    val itemTitle          = jsonObjectItem.getString("title")
-                    val itemSubtitle       = jsonObjectItem.getString("subtitle")
-                    val itemImage          = jsonObjectItem.getString("image")
+                    Log.i("DEBUG_JSON", "$jsonObjectItem")
 
-                    if (i == 0) {
-                        Log.e("clerkie", "itemTitle    -->$item_title")
-                        Log.e("clerkie", "itemSubtitle -->$itemSubtitle")
-                        Log.e("clerkie", "itemImage    -->$itemImage")
-                    }
+                    val titleText: String = jsonObjectItem
+                        .getJSONObject("title").getString("text")
+                    val subtitleText: String = jsonObjectItem
+                        .getJSONObject("subtitle").getString("text")
+                    val imageSrc: String = jsonObjectItem
+                        .getJSONObject("image").getString("src")
 
-                    /*
-                    textWithImageModel.title    = "" + itemTitle
-                    textWithImageModel.subtitle = "" + item_subtitle
-                    textWithImageModel.image    = "" + itemImage
-                     */
+                    Log.i("DEBUG_JSON_Title", "$titleText")
+                    Log.i("DEBUG_JSON_Title", "$subtitleText")
+                    Log.i("DEBUG_JSON_ImageSrc", "$imageSrc")
+
+
+                    textWithImageModel.titleText    = "" + titleText
+                    textWithImageModel.subtitleText = "" + subtitleText
+                    textWithImageModel.imageSrc    = "" + imageSrc
+
+
+
                     textWithImageModelArrayList!!.add(textWithImageModel)
                 } // for
 
