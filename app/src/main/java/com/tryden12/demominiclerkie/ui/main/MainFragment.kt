@@ -19,6 +19,8 @@ import com.tryden12.demominiclerkie.adapters.MyAdapter
 import com.tryden12.demominiclerkie.common.Common
 import com.tryden12.demominiclerkie.databinding.FragmentMainBinding
 import com.tryden12.demominiclerkie.model.TextWithImage
+import org.json.JSONException
+import org.json.JSONObject
 import java.io.IOException
 import java.io.InputStream
 
@@ -94,6 +96,27 @@ class MainFragment : Fragment(), View.OnClickListener {
         }
         return json
     }
+
+    private val jsonFileFromLocally: Unit
+        private get() {
+            try {
+                val jsonObject = JSONObject(loadJSONFromAsset())
+                val responseCode = jsonObject.getString("responseCode")
+
+
+            } catch (e: JSONException) {
+                e.printStackTrace()
+            }
+
+
+        }
+
+
+
+
+
+
+
 
 
     override fun onClick(v: View?) {
