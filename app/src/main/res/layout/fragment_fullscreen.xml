@@ -8,6 +8,19 @@
     android:background="@color/white"
     tools:context=".ui.main.FullscreenFragment">
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="52dp"
+        android:clickable="true"
+        android:src="@drawable/cancel"
+        app:backgroundTint="@color/white"
+        app:fabSize="mini"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:maxImageSize="40dp"
+        app:tint="@color/black" />
 
     <pl.droidsonroids.gif.GifImageView
         android:id="@+id/gifImageView"
