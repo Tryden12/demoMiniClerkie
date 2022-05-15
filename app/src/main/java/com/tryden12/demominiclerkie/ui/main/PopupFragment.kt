@@ -45,18 +45,40 @@ class PopupFragment : DialogFragment(), RadioGroup.OnCheckedChangeListener {
         val amount3 = rootView.findViewById<RadioButton>(R.id.amount_50)
         radioGroup.setOnCheckedChangeListener { _, checkedId ->
             val radio: RadioButton = rootView.findViewById(checkedId)
+
             when (radio) {
                 amount1 -> {
-                    amount1.setBackgroundColor(R.color.mint_green)
+                    amount1.setBackgroundResource(R.drawable.mint_green_circle)
+                    amount1.setTextColor(R.color.white)
+
+                    amount2.setBackgroundResource(R.drawable.grey_circle)
+                    amount2.setTextColor(R.color.mint_green)
+
+                    amount3.setBackgroundResource(R.drawable.grey_circle)
+                    amount3.setTextColor(R.color.mint_green)
                 }
                 amount2 -> {
-                    amount2.setBackgroundColor(R.color.mint_green)
+                    amount2.setBackgroundResource(R.drawable.mint_green_circle)
+
+                    amount1.setBackgroundResource(R.drawable.grey_circle)
+                    amount1.setTextColor(R.color.mint_green)
+
+                    amount3.setBackgroundResource(R.drawable.grey_circle)
+                    amount3.setTextColor(R.color.mint_green)
                 }
                 amount3 -> {
-                    amount3.setBackgroundColor(R.color.mint_green)
-                }
+                    amount3.setBackgroundResource(R.drawable.mint_green_circle)
 
+                    amount2.setBackgroundResource(R.drawable.grey_circle)
+                    amount2.setTextColor(R.color.mint_green)
+
+                    amount1.setBackgroundResource(R.drawable.grey_circle)
+                    amount1.setTextColor(R.color.mint_green)
+                }
             }
+
+
+
         }
 
 

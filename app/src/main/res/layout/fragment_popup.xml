@@ -44,8 +44,8 @@
             android:paddingLeft="15dp"
             android:textSize="12sp"
             android:checked="true"
-            android:textColor="@color/light_green"
-            android:background="@drawable/grey_circle"
+            android:textColor="@color/white"
+            android:background="@drawable/mint_green_circle"
             android:button="@android:color/transparent"/>
         <RadioButton
             android:id="@+id/amount_25"
