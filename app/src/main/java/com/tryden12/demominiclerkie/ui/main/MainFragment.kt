@@ -1,6 +1,8 @@
 package com.tryden12.demominiclerkie.ui.main
 
 import android.app.AlertDialog
+import android.content.res.Resources
+import android.graphics.Rect
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -8,6 +10,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.Toast
+import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
@@ -80,9 +83,17 @@ class MainFragment : Fragment(), View.OnClickListener {
         /*****************************************************************************************/
         navController = Navigation.findNavController(view)
         view.findViewById<View>(R.id.view_fullscreen).setOnClickListener(this)
-        view.findViewById<View>(R.id.view_popup).setOnClickListener(this)
         view.findViewById<Button>(R.id.view_fullscreen_btn).setOnClickListener(this)
-        view.findViewById<Button>(R.id.view_popup_btn).setOnClickListener(this)
+        view.findViewById<View>(R.id.view_popup).setOnClickListener {
+            var dialog = PopupFragment()
+
+            dialog.show(childFragmentManager, "cusomDialog")
+        }
+        view.findViewById<Button>(R.id.view_popup_btn).setOnClickListener {
+            var dialog = PopupFragment()
+
+            dialog.show(childFragmentManager, "cusomDialog")
+        }
         /*****************************************************************************************/
     }
 
@@ -173,16 +184,9 @@ class MainFragment : Fragment(), View.OnClickListener {
     override fun onClick(v: View?) {
         when (v!!.id) {
             R.id.view_fullscreen -> navController!!.navigate(R.id.action_mainFragment_to_fullscreenFragment)
-            R.id.view_popup -> navController!!.navigate(R.id.action_mainFragment_to_popupFragment)
             R.id.view_fullscreen_btn -> navController!!.navigate(R.id.action_mainFragment_to_fullscreenFragment)
-            R.id.view_popup_btn -> navController!!.navigate(R.id.action_mainFragment_to_popupFragment)
         }
     }
-
-
-
-
-
 
 
 
