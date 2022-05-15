@@ -2,10 +2,12 @@ package com.tryden12.demominiclerkie.ui.main
 
 import android.app.AlertDialog
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
@@ -19,6 +21,7 @@ import com.tryden12.demominiclerkie.adapters.MyAdapter
 import com.tryden12.demominiclerkie.common.Common
 import com.tryden12.demominiclerkie.databinding.FragmentMainBinding
 import com.tryden12.demominiclerkie.model.TextWithImage
+import kotlinx.android.synthetic.main.text_image_item.*
 import org.json.JSONException
 import org.json.JSONObject
 import java.io.IOException
@@ -68,7 +71,7 @@ class MainFragment : Fragment(), View.OnClickListener {
 
         /************************ Read Json ******************************************************/
         //readJson()
-        //jsonFileFromLocally
+        jsonFileFromLocally
 
 
 
@@ -100,9 +103,48 @@ class MainFragment : Fragment(), View.OnClickListener {
     private val jsonFileFromLocally: Unit
         private get() {
             try {
-                val jsonObject = JSONObject(loadJSONFromAsset())
-                val responseCode = jsonObject.getString("responseCode")
+                val jsonObject       = JSONObject(loadJSONFromAsset())
+                val responseCode     = jsonObject.getString("responseCode")
+                val responseMessage  = jsonObject.getString("responseMessage")
+                val responseTime     = jsonObject.getString("responseTime")
 
+                Log.e("clerkie", "responseCode     -->$responseCode")
+                Log.e("clerkie", "responseMessage  -->$responseMessage")
+                Log.e("clerkie", "responseTime     -->$responseTime")
+
+
+                if (responseCode == "100") {
+                } else {
+                    Toast.makeText(context, "No data found", Toast.LENGTH_SHORT).show()
+                }
+
+                val jsonArray =
+                    jsonObject.getJSONArray("textWithImageList")
+                Log.e("clerkie", "Array length --> " + jsonArray.length())
+                for (i in 0 until jsonArray.length()) {
+                    val textWithImageModel = TextWithImage()
+                    val jsonObjectItem     = jsonArray.getJSONObject(i)
+                    val itemTitle          = jsonObjectItem.getString("title")
+                    val itemSubtitle       = jsonObjectItem.getString("subtitle")
+                    val itemImage          = jsonObjectItem.getString("image")
+
+                    if (i == 0) {
+                        Log.e("clerkie", "itemTitle    -->$item_title")
+                        Log.e("clerkie", "itemSubtitle -->$itemSubtitle")
+                        Log.e("clerkie", "itemImage    -->$itemImage")
+                    }
+
+                    /*
+                    textWithImageModel.title    = "" + itemTitle
+                    textWithImageModel.subtitle = "" + item_subtitle
+                    textWithImageModel.image    = "" + itemImage
+                     */
+                    textWithImageModelArrayList!!.add(textWithImageModel)
+                } // for
+
+                if (textWithImageModelArrayList != null) {
+                    adapter!!.dataChanged(textWithImageModelArrayList!!)
+                }
 
             } catch (e: JSONException) {
                 e.printStackTrace()
