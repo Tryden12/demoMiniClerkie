@@ -49,31 +49,33 @@ class PopupFragment : DialogFragment(), RadioGroup.OnCheckedChangeListener {
             when (radio) {
                 amount1 -> {
                     amount1.setBackgroundResource(R.drawable.mint_green_circle)
-                    amount1.setTextColor(R.color.white)
+                    amount1.setTextColor(resources.getColor(R.color.white))
 
                     amount2.setBackgroundResource(R.drawable.grey_circle)
-                    amount2.setTextColor(R.color.mint_green)
+                    amount2.setTextColor(resources.getColor(R.color.mint_green))
 
                     amount3.setBackgroundResource(R.drawable.grey_circle)
-                    amount3.setTextColor(R.color.mint_green)
+                    amount3.setTextColor(resources.getColor(R.color.mint_green))
                 }
                 amount2 -> {
                     amount2.setBackgroundResource(R.drawable.mint_green_circle)
+                    amount2.setTextColor(resources.getColor(R.color.white))
 
                     amount1.setBackgroundResource(R.drawable.grey_circle)
-                    amount1.setTextColor(R.color.mint_green)
+                    amount1.setTextColor(resources.getColor(R.color.mint_green))
 
                     amount3.setBackgroundResource(R.drawable.grey_circle)
-                    amount3.setTextColor(R.color.mint_green)
+                    amount3.setTextColor(resources.getColor(R.color.mint_green))
                 }
                 amount3 -> {
                     amount3.setBackgroundResource(R.drawable.mint_green_circle)
+                    amount3.setTextColor(resources.getColor(R.color.white))
 
                     amount2.setBackgroundResource(R.drawable.grey_circle)
-                    amount2.setTextColor(R.color.mint_green)
+                    amount2.setTextColor(resources.getColor(R.color.mint_green))
 
                     amount1.setBackgroundResource(R.drawable.grey_circle)
-                    amount1.setTextColor(R.color.mint_green)
+                    amount1.setTextColor(resources.getColor(R.color.mint_green))
                 }
             }
 
