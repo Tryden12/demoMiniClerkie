@@ -16,4 +16,7 @@
 
     <string name="title">Title</string>
     <string name="subtitle">Subtitle</string>
+    <string name="heading">Heading</string>
+    <string name="description">Description</string>
+    <string name="get_started">Get Started</string>
 </resources>
