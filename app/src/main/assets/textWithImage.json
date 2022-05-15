@@ -28,6 +28,48 @@
       "id": 2,
       "type": "text_with_image",
       "title":{
+        "text": "Tyler",
+        "font_size": "14",
+        "font_weight": "normal",
+        "color": "black"
+      },
+      "subtitle":{
+        "text": "Android Developer",
+        "font_size": "14",
+        "font_weight": "normal",
+        "color": "black"
+      },
+      "image": {
+        "src": "https://i.imgur.com/KavRSSi.jpeg"
+      },
+      "height": 0,
+      "click_action": "dismiss"
+    },
+    {
+      "id": 3,
+      "type": "text_with_image",
+      "title":{
+        "text": "Tyler",
+        "font_size": "14",
+        "font_weight": "normal",
+        "color": "black"
+      },
+      "subtitle":{
+        "text": "Android Developer",
+        "font_size": "14",
+        "font_weight": "normal",
+        "color": "black"
+      },
+      "image": {
+        "src": "https://i.imgur.com/KavRSSi.jpeg"
+      },
+      "height": 0,
+      "click_action": "dismiss"
+    },
+    {
+      "id": 4,
+      "type": "text_with_image",
+      "title":{
         "text": "Title",
         "font_size": "14",
         "font_weight": "normal",
