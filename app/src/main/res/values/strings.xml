@@ -12,6 +12,7 @@
 
     <string name="view_fullscreen">View Fullscreen</string>
     <string name="view_popup">View Popup</string>
+    <string name="transition_right">Transition Right</string>
 
     <string name="title">Title</string>
     <string name="subtitle">Subtitle</string>
